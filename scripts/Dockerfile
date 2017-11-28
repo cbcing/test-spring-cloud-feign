@@ -8,6 +8,6 @@ RUN cd /tmp && \
 
 FROM java:8-jre-alpine
 
-COPY --from=build /tmp/build/libs/test-spring-cloud-ribbon-0.0.1-SNAPSHOT.jar /
+COPY --from=build /tmp/build/libs/test-spring-cloud-feign-0.0.1-SNAPSHOT.jar /
 
-ENTRYPOINT ["java", "-server", "-jar", "/test-spring-cloud-ribbon-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-server", "-jar", "/test-spring-cloud-feign-0.0.1-SNAPSHOT.jar"]
